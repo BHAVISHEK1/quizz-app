@@ -1,0 +1,88 @@
+
+<div class="market-status-container">
+
+  
+
+
+  <div *ngIf="error" class="error">
+    <p>{{ error }}</p>
+  </div>
+
+  <div class="unique-filter-container">
+
+
+    <button (click)="home()" class="home-button-dhan">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    
+    <div class="unique-filter">
+      <label for="exchangeFilter">Exchange:</label>
+      <select id="exchangeFilter" class="unique-select" [(ngModel)]="selectedExchange" (change)="filterData()">
+        <option value="">All</option>
+        <option *ngFor="let exchange of exchanges" [value]="exchange">{{ exchange }}</option>
+      </select>
+    </div>
+
+    <div class="unique-filter">
+      <label for="segmentFilter">Segment:</label>
+      <select id="segmentFilter" class="unique-select" [(ngModel)]="selectedSegment" (change)="filterData()">
+        <option value="">All</option>
+        <option *ngFor="let segment of segments" [value]="segment">{{ segment }}</option>
+      </select>
+    </div>
+
+    <div class="unique-filter">
+      <label for="segmentCodeFilter">Segment Code:</label>
+      <select id="segmentCodeFilter" class="unique-select" [(ngModel)]="selectedSegmentCode" (change)="filterData()">
+        <option value="">All</option>
+        <option *ngFor="let segmentCode of segmentCodes" [value]="segmentCode">{{ segmentCode }}</option>
+      </select>
+    </div>
+
+    <div class="unique-filter">
+      <label for="marketTypeFilter">Market Type:</label>
+      <select id="marketTypeFilter" class="unique-select" [(ngModel)]="selectedMarketType" (change)="filterData()">
+        <option value="">All</option>
+        <option *ngFor="let marketType of marketTypes" [value]="marketType">{{ marketType }}</option>
+      </select>
+    </div>
+    
+    <div class="unique-filter">
+      <label for="marketStatusFilter">Market Status:</label>
+      <select id="marketStatusFilter" class="unique-select" [(ngModel)]="selectedMarketStatus" (change)="filterData()">
+        <option value="">All</option>
+        <option *ngFor="let marketStatus of marketStatuses" [value]="marketStatus">{{ marketStatus }}</option>
+      </select>
+    </div>
+  </div>
+  
+
+  <div *ngIf="filteredData.length > 0">
+    <table class="status-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Exchange</th>
+          <th>Segment</th>
+          <th>Segment Code</th>
+          <th>Market Type</th>
+          <th>Market Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of filteredData; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.exchange }}</td>
+          <td>{{ item.segment }}</td>
+          <td>{{ item.segmentcode }}</td>
+          <td>{{ item.mkttype }}</td>
+          <td>{{ item.mktstatus }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="filteredData.length === 0 && !error">
+    <p>No data available.</p>
+  </div>
+</div>

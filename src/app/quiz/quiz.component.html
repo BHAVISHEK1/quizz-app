@@ -1,0 +1,33 @@
+<div class="quiz-container">
+  <div class="header-container">
+    <button (click)="home()" class="home-button">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <h1>Quiz</h1>
+  </div>
+
+  <form #quizForm="ngForm" (ngSubmit)="submitQuiz(quizForm)">
+    <div *ngFor="let question of questions; let i = index">
+      <p>{{ question.question }}</p>
+      <div *ngFor="let option of question.options">
+        <label>
+          <input
+            type="radio"
+            name="question{{ i }}"
+            [value]="option"
+            [(ngModel)]="userAnswers[i]"
+            required
+          />
+          {{ option }}
+        </label>
+      </div>
+      <div *ngIf="quizForm.submitted && !userAnswers[i]" class="error">
+        <p class="error-message">Please select an option for this question.</p>
+      </div>
+    </div>
+    <div *ngIf="showErrorMessage" class="error">
+      <p class="error-message">Please answer all questions before submitting.</p>
+    </div>
+    <button type="submit">Submit Quiz</button>
+  </form>
+</div>
