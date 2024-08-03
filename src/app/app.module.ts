@@ -9,6 +9,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MarketStatusComponent } from './market-status/market-status.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PostDataComponent } from './post-data/post-data.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     QuizComponent,
     ScoreComponent,
     WelcomeComponent,
-    MarketStatusComponent
+    MarketStatusComponent,
+    PostDataComponent
     
   ],
   imports: [

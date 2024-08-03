@@ -4,6 +4,7 @@ import { QuizComponent } from './quiz/quiz.component';
 import { ScoreComponent } from './score/score.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { MarketStatusComponent } from './market-status/market-status.component';
+import { PostDataComponent } from './post-data/post-data.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full' },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'quiz', component: QuizComponent },
   { path: 'score', component: ScoreComponent },
   { path: 'dhan', component: MarketStatusComponent },
+  { path: 'dhan-post', component: PostDataComponent },
   
   
 ];

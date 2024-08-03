@@ -19,7 +19,7 @@ export class WelcomeComponent {
   }
 
   testPost() {
-    this.router.navigate(['/score']);
+    this.router.navigate(['/dhan-post']);
   }
 
 }

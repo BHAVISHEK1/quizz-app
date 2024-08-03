@@ -24,7 +24,7 @@
     </div>
 
     <div class="unique-filter">
-      <label for="segmentFilter">Segment:</label>
+      <label for="segmentFilter">Segment :</label>
       <select id="segmentFilter" class="unique-select" [(ngModel)]="selectedSegment" (change)="filterData()">
         <option value="">All</option>
         <option *ngFor="let segment of segments" [value]="segment">{{ segment }}</option>
@@ -32,7 +32,7 @@
     </div>
 
     <div class="unique-filter">
-      <label for="segmentCodeFilter">Segment Code:</label>
+      <label for="segmentCodeFilter">Segment:</label>
       <select id="segmentCodeFilter" class="unique-select" [(ngModel)]="selectedSegmentCode" (change)="filterData()">
         <option value="">All</option>
         <option *ngFor="let segmentCode of segmentCodes" [value]="segmentCode">{{ segmentCode }}</option>
@@ -40,7 +40,7 @@
     </div>
 
     <div class="unique-filter">
-      <label for="marketTypeFilter">Market Type:</label>
+      <label for="marketTypeFilter">Market:</label>
       <select id="marketTypeFilter" class="unique-select" [(ngModel)]="selectedMarketType" (change)="filterData()">
         <option value="">All</option>
         <option *ngFor="let marketType of marketTypes" [value]="marketType">{{ marketType }}</option>

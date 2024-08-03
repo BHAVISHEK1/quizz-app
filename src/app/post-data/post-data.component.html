@@ -1,0 +1,14 @@
+
+
+<div class="post-data-container">
+
+    <button (click)="home()" class="home-button-dhan">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+    <button (click)="postData()">Send Data</button>
+    <div *ngIf="responseData">
+      <h3>Response Data:</h3>
+      <pre>{{ responseData | json }}</pre>
+    </div>
+  </div>
+  
