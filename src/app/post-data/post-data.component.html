@@ -2,13 +2,48 @@
 
 <div class="post-data-container">
 
-    <button (click)="home()" class="home-button-dhan">
-        <i class="fa-solid fa-arrow-left"></i>
-      </button>
+  
+      <div class="tooltip-container">
+        <button (click)="home()" class="home-button-dhan">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <span class="tooltip-text">Home</span>
+      </div>
+      
+
     <button (click)="postData()">Send Data</button>
+    
     <div *ngIf="responseData">
       <h3>Response Data:</h3>
-      <pre>{{ responseData | json }}</pre>
+      <pre>{{ responseData | json }}
+      </pre>
+
+      <table class="post-table" >
+
+        <thead>
+        <tr> 
+
+          <th>Name</th>
+          <th>Job</th>
+          <th>ID</th>
+          <th>Created At</th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+
+            <td>{{responseData.name}}</td>
+            <td>{{responseData.job}}</td>
+            <td>{{responseData.id}}</td>
+            <td>{{responseData.createdAt}}</td>
+
+          </tr>
+        </tbody>
+
+      </table>
     </div>
+
   </div>
   

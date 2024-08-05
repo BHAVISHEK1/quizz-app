@@ -13,8 +13,6 @@ const routes: Routes = [
   { path: 'score', component: ScoreComponent },
   { path: 'dhan', component: MarketStatusComponent },
   { path: 'dhan-post', component: PostDataComponent },
-  
-  
 ];
 
 @NgModule({

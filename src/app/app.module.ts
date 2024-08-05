@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MarketStatusComponent } from './market-status/market-status.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostDataComponent } from './post-data/post-data.component';
+import { Post2Component } from './post-2/post-2.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PostDataComponent } from './post-data/post-data.component';
     ScoreComponent,
     WelcomeComponent,
     MarketStatusComponent,
-    PostDataComponent
+    PostDataComponent,
+    Post2Component
     
   ],
   imports: [

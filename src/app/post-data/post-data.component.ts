@@ -14,14 +14,26 @@ export class PostDataComponent {
   constructor(private http: HttpClient,private router: Router ) {}
 
   postData() {
-    const url = 'https://dhan-rms-admin-api.dhan.co/getsecmaster';
+
+    // const url = 'https://dhan-rms-admin-api.dhan.co/getsecmaster';
+    // const data = {
+    //     "data": {
+    //         "Exch": "NSE",
+    //         "Segment": "D",
+    //         "ScripCode": "35007"
+    //     }
+    // };
+
+
+    const url = 'https://reqres.in/api/users';
     const data = {
-      data: {
-        Exch: 'NSE',
-        Segment: 'D',
-        ScripCode: '35007'
-      }
+      
+        name: 'John Doe',
+        job: 'Developer'
+      
     };
+
+    
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
