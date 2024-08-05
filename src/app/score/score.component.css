@@ -92,6 +92,10 @@
   }
   
 
+  .high-per{
+    color: green;
+  }
+
   .low-score {
     color: red;
   }

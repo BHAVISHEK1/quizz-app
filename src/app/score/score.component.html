@@ -14,6 +14,7 @@
       Your score: {{score}} / {{totalQuestions}}
     </p>
     <p *ngIf="score >= 3" class="high-score">Great Score!</p>
+    <p>{{ percentageScore | number:'1.0-2' }}%</p>
     <p *ngIf="score < 3" class="low-score">You Might Want to Try Again</p>
     <button (click)="retakeQuiz()">Retake Quiz</button>
   </div>

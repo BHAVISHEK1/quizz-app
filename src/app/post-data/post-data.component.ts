@@ -33,8 +33,6 @@ export class PostDataComponent {
       
     };
 
-    
-
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
@@ -45,10 +43,12 @@ export class PostDataComponent {
         this.responseData = response;
       },
       error => {
-        console.error('There was an error!', error);
+        console.error(' error!', error);
       }
     );
   }
+
+  
 
   home() {
     this.router.navigate(['/']);

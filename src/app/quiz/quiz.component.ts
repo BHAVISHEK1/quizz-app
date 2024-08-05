@@ -13,6 +13,7 @@ interface Question {
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent {
+  
   questions: Question[] = [
     {
       question: 'Who is the current Prime Minister of India?',
