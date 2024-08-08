@@ -22,4 +22,8 @@ export class WelcomeComponent {
     this.router.navigate(['/dhan-post']);
   }
 
+  testMaterial(){
+    window.location.href = "https://matrial-ang-abhishek-yadav.netlify.app/";
+  }
+
 }
